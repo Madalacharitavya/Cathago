@@ -108,17 +108,9 @@ Check matching results & available credits
 
 Request extra credits if needed
 
-Screenshots
+Screenshots:
+![WhatsApp Image 2025-02-28 at 15 16 14_8f1f3464](https://github.com/user-attachments/assets/0a13c2a8-c38d-4c62-8db7-168d4dc42d40)
 
-📸 Register & Login Page-
-
-📸 Upload & Scan Interface
-
-📸 Matching Results Page
-
-📸 Credit System & Request Page
-
-📸 Admin Dashboard
 
 Demo Video
 
