@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin dashboard</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}"> 
+</head>
+<body>
+    <div class="container">
+        <h2>Admin dashboard</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>User</th>
+                    <th>Credits</th>
+                    <th>Scans</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="userTable">
+                <!-- Fetched user data will be inserted here -->
+            </tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

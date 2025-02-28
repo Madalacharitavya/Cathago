@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document Scanner</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Scan a Document</h2>
+      <form method="POST">
+        {% csrf_token %}
+        <textarea id="scanned-text" name="text" rows="5" cols="50">
+The world of technology is evolving rapidly, bringing new innovations every day. Artificial intelligence and machine learning are transforming industries worldwide. From healthcare to finance, automation is making processes faster and more efficient. The internet has connected people across the globe, enabling instant communication. Cybersecurity has become crucial to protect data from online threats and breaches. Cloud computing allows businesses to scale operations without heavy infrastructure costs. The rise of electric vehicles is paving the way for a greener and sustainable future. Social media has changed the way people interact, share ideas, and do business. The future holds exciting advancements in space exploration and quantum computing. Embracing technology responsibly can lead to a smarter and more connected world.
+            
+        </textarea>
+        <br /><br />
+        <button onclick="window.alert('No Matches Found')">Scan</button>
+        <button onclick="window.location.href='home'">Back to Profile</button>
+      </form>
+
+      {% if error %}
+      <p class="error">{{ error }}</p>
+      {% endif %} {% if similar_docs %}
+      <h3>Similar Documents:</h3>
+      <ul>
+        {% for title, score in similar_docs %}
+        <li>{{ title }} (Similarity Score: {{ score|floatformat:2 }})</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+    <script src="script.js"></script>
+    <script>
+      // Prefill textarea with uploaded document content
+      document.addEventListener("DOMContentLoaded", function () {
+        let uploadedText = localStorage.getItem("uploadedDocument");
+        if (uploadedText) {
+          document.getElementById("scanned-text").value = uploadedText;
+        }
+      });
+    </script>
+  </body>
+</html>

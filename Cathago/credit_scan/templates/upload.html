@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upload Document | Credit Scan</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}" />
+  </head>
+  <body class="upload-page">
+    <div class="container">
+      <h2>Upload Document for Scanning</h2>
+
+      <!-- File upload input -->
+      <input
+        type="file"
+        id="document-upload"
+        accept=".txt"
+        onchange="previewFile()"
+      />
+
+      <!-- Button to scan the document -->
+      <button id="scan-btn" onclick="window.location.href='/scan'">
+        Scan Document
+      </button>
+
+      <!-- Button to go back to profile -->
+      <button onclick="window.location.href='/dashboard'">
+        Back to Profile
+      </button>
+    </div>
+
+    <script src="{% static 'script.js' %}"></script>
+    <script>
+      document
+        .getElementById("scan-btn")
+        .addEventListener("click", function () {
+          uploadDocument(); // Calls function to handle upload & redirect
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Credit Scan</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}"> 
+</head>
+<body>
+    <div class="container">
+        <h2>Register</h2>
+        <form id="registerForm" method="POST" action="{% url 'register' %}">
+            {% csrf_token %}
+            <div class="input-group">
+                <img src="https://cdn-icons-png.flaticon.com/512/747/747376.png" alt="User Icon">
+                <input type="text" id="email" name="email" placeholder="Please Enter the email" required>
+            </div>
+            <div class="input-group">
+                <img src="https://cdn-icons-png.flaticon.com/512/3064/3064155.png" alt="Password Icon">
+                <input type="password" id="password" name="password" placeholder="Choose a Password" required>
+            </div>
+            <button type="submit">Register</button>
+        </form>
+        <p>Already have an account? <a href="login.html">Login</a></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

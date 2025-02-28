@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile | Credit Scan</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}" />
+  </head>
+  <body class="profile-page">
+    <div class="container">
+      <h2>Welcome, <span id="user-name">User</span></h2>
+      <p>Your available credits: <span id="user-credits">20</span></p>
+
+      <hr />
+
+      <button onclick="window.location.href='/upload'">Upload Document</button>
+      <button onclick="window.alert('Request Send To Admin')">
+        Request More Credits
+      </button>
+      <button onclick="window.location.href='/'">Logout</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

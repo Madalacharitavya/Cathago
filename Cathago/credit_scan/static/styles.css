@@ -1,0 +1,170 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Fullscreen Background with Modern Look */
+body {
+    background: url('https://images.unsplash.com/photo-1518773553398-650c184e0bb3') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Neon Glassmorphism Card */
+.container, .admin-login-container, .admin-register-container {
+    background: rgba(255, 255, 255, 0.1); /* Light Glass Effect */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    width: 400px;
+    text-align: center;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover, .admin-login-container:hover, .admin-register-container:hover {
+    transform: scale(1.02);
+}
+
+/* Heading */
+h2 {
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 26px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Input Fields */
+.input-group, .admin-input-group {
+    position: relative;
+    width: 100%;
+}
+
+.input-group input, .admin-input-group input {
+    width: 100%;
+    padding: 12px;
+    padding-left: 45px;
+    margin: 12px 0;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Icons inside input fields */
+.input-group img, .admin-input-group img {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    opacity: 0.7;
+}
+
+/* Glow Effect on Focus */
+input:focus {
+    border-color: #ff6f61;
+    box-shadow: 0 0 10px #ff6f61;
+}
+
+/* Placeholder Color */
+input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Neon Button */
+button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #ff6f61, #ff4757);
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    box-shadow: 0 0 10px rgba(255, 111, 97, 0.8);
+    text-transform: uppercase;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #ff4757, #ff6f61);
+    box-shadow: 0 0 20px rgba(255, 111, 97, 1);
+    transform: scale(1.05);
+}
+
+/* Links */
+p {
+    margin-top: 15px;
+    font-size: 15px;
+    color: #fff;
+}
+
+a {
+    color: #ffb6b9;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #ff4757;
+}
+
+/* Admin-Specific Pages */
+.admin-login-page, .admin-register-page {
+    background: url('https://images.unsplash.com/photo-1589652717521-10c0d092dea9') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Centered Forms for Admin Pages */
+.admin-login-container, .admin-register-container {
+    width: 450px;
+}
+
+/* Different Color Scheme for Admin Pages */
+.admin-login-container button, .admin-register-container button {
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    box-shadow: 0 0 10px rgba(79, 172, 254, 0.8);
+}
+
+.admin-login-container button:hover, .admin-register-container button:hover {
+    background: linear-gradient(135deg, #00f2fe, #4facfe);
+    box-shadow: 0 0 20px rgba(79, 172, 254, 1);
+}
+
+/* Input fields special effects for admin */
+.admin-input-group input {
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.admin-input-group input:focus {
+    border-color: #4facfe;
+    box-shadow: 0 0 10px #4facfe;
+}
+
+/* Additional admin text styles */
+.admin-login-container h2, .admin-register-container h2 {
+    color: #00f2fe;
+    text-shadow: 0 0 15px rgba(0, 242, 254, 0.7);
+}
+
+
