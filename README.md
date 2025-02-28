@@ -1,10 +1,11 @@
 Credit-Based Document Scanning System
 
-Overview
+Overview:
 
 The Credit-Based Document Scanning System is a self-contained application that allows users to upload and scan documents for similarity detection. Each user receives 20 free scans per day, with the option to request additional credits from an admin. The system also includes an analytics dashboard for tracking scans and credit usage.
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Features
+Features:
 
 1. User Authentication & Role Management
 
@@ -46,7 +47,7 @@ View top users by scan count & credit usage
 
 Generate credit usage statistics for admins
 
-Tech Stack
+Tech Stack:
 
 Frontend:
 
@@ -74,57 +75,8 @@ Custom Levenshtein distance algorithm & word frequency analysis
 
 AI-based similarity detection (Optional)
 
-API Endpoints
 
-Method
-
-Endpoint
-
-Description
-
-POST
-
-/auth/register
-
-User registration
-
-POST
-
-/auth/login
-
-User login (Session-based)
-
-GET
-
-/user/profile
-
-Get user profile & credits
-
-POST
-
-/scan
-
-Upload document for scanning (uses 1 credit)
-
-GET
-
-/matches/:docId
-
-Get matching documents
-
-POST
-
-/credits/request
-
-Request admin for additional credits
-
-GET
-
-/admin/analytics
-
-Get analytics for admins
-
-Setup Instructions
+Setup Instructions:
 
 1. Install Dependencies
 
